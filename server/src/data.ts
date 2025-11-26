@@ -7,22 +7,22 @@ export const users = [
   {
     id: '2',
     name: 'Bob Smith',
-    profilePicture: 'https://i.pravatar.cc/150?img=34',
+    profilePicture: 'https://i.pravatar.cc/150?img=52',
   },
   {
     id: '3',
     name: 'Charlie Brown',
-    profilePicture: 'https://i.pravatar.cc/150?img=56',
+    profilePicture: 'https://i.pravatar.cc/150?img=14',
   },
   {
     id: '4',
     name: 'Diana Prince',
-    profilePicture: 'https://i.pravatar.cc/150?img=78',
+    profilePicture: 'https://i.pravatar.cc/150?img=54',
   },
   {
     id: '5',
     name: 'Ethan Hunt',
-    profilePicture: 'https://i.pravatar.cc/150?img=90',
+    profilePicture: 'https://i.pravatar.cc/150?img=13',
   },
 ];
 

@@ -3,6 +3,7 @@ import { startStandaloneServer } from '@apollo/server/standalone';
 import { comments, posts, replies, users } from './data';
 
 const typeDefs = `#graphql
+scalar Date
 type User {
   id: ID!
   name: String!
@@ -15,6 +16,7 @@ type Post {
   content: String!
   author: User!
   comments: [Comment]
+  timestamp: Date
 }
 
 type Comment {
@@ -22,12 +24,14 @@ type Comment {
   content: String!
   author: User!
   replies: [Reply]
+  timestamp: Date
 }
 
 type Reply {
   id: ID!
   content: String!
   author: User!
+    timestamp: Date
 }
 
 type Query {
@@ -128,8 +132,12 @@ const server = new ApolloServer({
   resolvers,
 });
 
-const { url } = await startStandaloneServer(server, {
-  listen: { port: 4000 },
-});
+async function startServer() {
+  const { url } = await startStandaloneServer(server, {
+    listen: { port: 4000 },
+  });
 
-console.log(`🚀 Server ready at: ${url}`);
+  console.log(`🚀 Server ready at: ${url}`);
+}
+
+startServer();

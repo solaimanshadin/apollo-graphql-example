@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // Modern JS output
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], // Includes DOM & ESNext APIs
+    "allowJs": true, // Allow JS files in the project
+    "skipLibCheck": true, // Skip type checks on libraries
+    "esModuleInterop": true, // Enables `import x from 'x'` syntax
+    "allowSyntheticDefaultImports": true,
+    "strict": true, // Enable all strict type-checking options
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext", // ES module output
+    "moduleResolution": "node",
+    "resolveJsonModule": true, // Import JSON modules
+    "isolatedModules": true,
+    "noEmit": true, // Don't emit JS (Vite/CRA handles it)
+    "jsx": "react-jsx", // ✅ Enables JSX in TSX files
+    "baseUrl": "src", // Root for absolute imports
+    "paths": {
+      "@/*": ["*"] // Allows import like '@/components/ui/avatar'
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
